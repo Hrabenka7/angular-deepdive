@@ -1,0 +1,14 @@
+<div class="container-fluid">
+
+<div class="alert alert-danger">
+ Using: String Interpolation, Event-binding, Property-binding, Two-Ways-Databinding
+</div>
+
+<label> Enter your username: </label>
+<input text="text" class="form-control" [(ngModel)]="username" (input)="onEnableButton($event)">
+<br>
+
+<p> Hello <b>{{username}}</b> ! Welcome to my site. Hope you will have a great time here.</p>
+
+<button class="btn btn-danger" [disabled]="emptyString" (click)="onSetEmpty()"> Clear the username</button>
+</div>
