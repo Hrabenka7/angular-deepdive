@@ -1,6 +1,8 @@
-<app-success></app-success>
-
 <app-binding></app-binding>
-
 <app-directives></app-directives>
 
+<app-game-control (intervalSet) = onIntervalSet($event)></app-game-control> <!-- custom event binding -->
+  <div class="container">
+    <app-even-number *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-even-number>  <!--  number @Input even-number.component.ts -->
+    <app-odd-number *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd-number>
+  </div>

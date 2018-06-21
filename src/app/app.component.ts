@@ -6,5 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  oddNumbers: number[] = []; // oddNumbers is a type "array of numbers", and its empty array
+  evenNumbers: number[] = [];
+
+  onIntervalSet(Number: number) {   // receive event "Number" of type number
+    if (Number % 2 === 0) {
+      this.evenNumbers.push(Number);
+    } else {
+      this.oddNumbers.push(Number);
+    }
+  }
 }
