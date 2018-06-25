@@ -11,6 +11,7 @@ export class DirectivesComponent implements OnInit {
   logs = [];
   count = 0;
 
+
   constructor() { }
 
   ngOnInit() {

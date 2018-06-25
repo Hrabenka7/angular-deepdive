@@ -12,6 +12,9 @@ import { GameControlComponent } from './components/gameComponents/game-control/g
 import { OddNumberComponent } from './components/gameComponents/odd-number/odd-number.component';
 import { EventNumberComponent } from './components/gameComponents/even-number/even-number.component';
 
+import { OrangeBackgroundDirective } from './components/directives/orange-background.directive';
+import { RedTextDirective } from './components/directives/red-text.directive';
+
 
 @NgModule({
   declarations: [
@@ -22,6 +25,8 @@ import { EventNumberComponent } from './components/gameComponents/even-number/ev
     GameControlComponent,
     OddNumberComponent,
     EventNumberComponent,
+    OrangeBackgroundDirective,
+    RedTextDirective
   ],
   imports: [
     BrowserModule,

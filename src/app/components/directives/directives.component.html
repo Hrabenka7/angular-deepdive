@@ -1,27 +1,27 @@
 <div class="container-fluid">
 
-<div class="alert alert-warning">
-  Using directives: ngIf, ngFor, ngStyle, ngClass
-</div>
-
-<button class="btn btn-warning" (click)="onShowSkills()"> {{buttonText}} My Skills </button>
-
-<div>
-  <div *ngIf="skillsDisplayed"> 
-    <ul>
-      <li> Angular </li>
-      <li> Bootstrap </li>
-      <li> Express </li>
-      <li> Java </li>
-    </ul>
-
-    <b> Style changes will be applied after 5 clicks and more.</b>
+  <div class="alert alert-warning">
+    Using directives: ngIf, ngFor, ngStyle, ngClass, @Directive with Renderer2, @HostListener, @HostBinding
   </div>
+  <button class="btn btn-warning" (click)="onShowSkills()"> {{buttonText}} My Skills </button>
+
+  <div>
+    <div *ngIf="skillsDisplayed"> 
+      <ul>
+        <li appRedText> Bootstrap  &larr; <b>MOUSE HOVER</b></li>
+        <li> Express </li>
+        <li appOrangeBackground> Angular &larr; <b>MOUSE HOVER</b>  </li>
+        <li> Java </li>
+      </ul>
+
+      <b> Style changes will be applied after 5 clicks and more.</b>
+    </div>
 
 
-  <div 
-    *ngFor="let log of logs"
-    [ngStyle]="{backgroundColor: log >= 5 ? 'yellow' : 'transparent'}" 
-    [ngClass]="{'purple-text': log >= 5}"> The yellow button was clicked {{log}}x </div>
-  </div>
+    <div 
+      *ngFor="let log of logs"
+      [ngStyle]="{backgroundColor: log >= 5 ? 'yellow' : 'transparent'}" 
+      [ngClass]="{'purple-text': log >= 5}"> The yellow button was clicked {{log}}x </div>
+    </div>
+
 </div>
